@@ -1,0 +1,50 @@
+.backMain {
+  /* height: 100vh; */
+  height: auto;
+  padding: 5% 0;
+  background-image: url(../../img/spiderverse.jpeg);
+  color: #fff;
+  background-size: cover;
+}
+
+.title {
+  text-align: center;
+  padding-top: 5% 0;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-shadow: 2px 2px purple;
+  text-decoration: underline;
+}
+
+.tabs {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.listRoutes {
+  padding: 5% 0;
+}
+
+.listRoutes h3 {
+  text-transform: uppercase;
+}
+
+.listRoutes ul {
+  display: flex;
+  justify-content: center;
+  column-gap: 15%;
+  list-style: none;
+  margin-top: 1%;
+}
+
+.listRoutes ul li {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.listRoutes ul li:hover {
+  color: red;
+}
