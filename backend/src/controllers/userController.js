@@ -33,25 +33,25 @@ routes.delete('/:idUser', async (req, res) => {
 
 
 
-routes.get('/', async (req, res)=>{
+routes.get('/', async (req, res) => {
   const users = await db.getUsers();
   try {
-    return res.status(200).send({message:users});
+    return res.status(200).send({ message: users });
   } catch (err) {
-    return res.status(500).send({message:err});
+    return res.status(500).send({ message: err });
   }
 });
 
 routes.get('/:idUser', async (request, response) => {
-  const {userId} = request.params;
+  const { userId } = request.params;
 
-  try{
+  try {
     const users = await db.getSpecificUser(userId)
     return res.status(200).send({
       message: users
     })
   } catch (err) {
-    return res.status(500).send({ message: err})
+    return res.status(500).send({ message: err })
   }
 });
 

@@ -37,4 +37,4 @@ async function deleteActor(idActor) {
   conn.end();
 }
 
-export default { findActor,createActor, updateActor, deleteActor };
+export default { findActor, createActor, updateActor, deleteActor };

@@ -3,17 +3,17 @@ import db from "../services/actorService.js";
 
 const routes = express.Router();
 
-routes.get ('/', async (request, response) => {
-  try{
+routes.get('/', async (request, response) => {
+  try {
     const results = await db.findActor();
 
-    if(results.length === 0 ){
+    if (results.length === 0) {
       response.status(204).end();
     } else {
       response.status(200).json(results);
     }
-  }catch(err) {
-    response.status(500).json({message: `Encontramos um erro: ${err}`});
+  } catch (err) {
+    response.status(500).json({ message: `Encontramos um erro: ${err}` });
   }
 });
 

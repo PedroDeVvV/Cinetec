@@ -25,7 +25,6 @@ routes.post('/', async (request, response) => {
   response.status(200).send({ message: "Genero salvo com sucesso" })
 })
 
-
 routes.put("/", async (request, response) => {
   try {
     const { genero } = request.body;

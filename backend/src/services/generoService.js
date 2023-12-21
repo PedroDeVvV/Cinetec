@@ -16,6 +16,7 @@ async function createGenero(genero) {
   const conn = await database.connect();
   await conn.query(sql, values);
 }
+
 async function updateGenero(genero, idGenero) {
   const sql =
     "UPDATE tbl_genero SET genero = ? WHERE id_genero = ?";

@@ -12,4 +12,4 @@ async function connect() {
   return connection
 }
 
-export default {connect}
+export default { connect }

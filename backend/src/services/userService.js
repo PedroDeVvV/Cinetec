@@ -44,4 +44,4 @@ async function getSpecificUser(userId) {
   return rows;
 }
 
-export default { createUser, updateUser, deleteUser, getUsers,getSpecificUser }
+export default { createUser, updateUser, deleteUser, getUsers, getSpecificUser }
