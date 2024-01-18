@@ -39,20 +39,20 @@ create table tbl_filme (
 	duracao INT(3) not null,
 	fk_id_genero int not null,
 	fk_id_diretor int not null,
-	foreign key (fk_id_genero) references tbl_genero(id_genero),
-	foreign key (fk_id_diretor) references tbl_diretor(id_diretor)
+	foreign key (fk_id_genero) references tbl_genero(id_genero) on delete cascade,
+	foreign key (fk_id_diretor) references tbl_diretor(id_diretor) on delete cascade
 );
 
 create table tbl_filme_has_tbl_ator (
 	fk_id_filme INT,
 	fk_id_ator INT,
-	foreign key (fk_id_filme) references tbl_filme(id_filme),
-	foreign key (fk_id_ator) references tbl_ator(id_ator),
+	foreign key (fk_id_filme) references tbl_filme(id_filme) on delete cascade,
+	foreign key (fk_id_ator) references tbl_ator(id_ator) on delete cascade,
 	primary key(fk_id_ator, fk_id_filme),
 	personagem VARCHAR(45) #INCLUI ESSE CAMPO PARA RELACIONAR ATOR COM PERSONAGEM
 );
 
-#ALTERAÇÕEDS
+#ALTERAÇÕES
 
 alter table tbl_diretor add sexo varchar(1) not null;
 alter table tbl_diretor modify nacionalidade varchar(45);
@@ -100,17 +100,22 @@ INSERT INTO tbl_ator(nome_ator, sexo, dt_nascimento)
 			("Wagner Moura",	"M"	, '1976-06-27');
 
 
+#delete from tbl_genero where genero = "Ação";
+#delete from tbl_filme_e_ator where fk_id_ator = 7;  #Antes
+#delete from tbl_ator where id_ator = 7; 
+select * from tbl_filme_e_ator;
+select * from tbl_genero;
 
-insert into tbl_genero (id_genero, genero)
-	values	(1, "Terror"),
-			(2, "Ação"),
-			(3, "Comedia"),
-			(4, "Drama"),
-			(5, "Suspense"),
-			(6, "Ficção"),
-			(7, "Romance"),
-			(8, "Animação"),
-            (9, "Futurista");
+insert into tbl_genero (genero)
+	values	( "Terror"),
+			("Ação"),
+			("Comedia"),
+			("Drama"),
+			("Suspense"),
+			("Ficção"),
+			("Romance"),
+			("Animação"),
+            ("Futurista");
 
 
 
@@ -146,7 +151,6 @@ insert into tbl_filme ( nome_filme, ano_lancamento, duracao, fk_id_genero, fk_id
 	( "Transformers", 2007, 150, 2, 4	),
 	( "Ilha do Medo", 2010, 139, 5, 1	);
 
-
 insert into tbl_filme_e_ator (fk_id_filme, fk_id_ator, personagem)
 	values	(2, 5, "Logan"),
 			(4, 7, "Neo"),
@@ -166,13 +170,12 @@ insert into tbl_filme_e_ator (fk_id_filme, fk_id_ator, personagem)
 			(7, 13, "Adrian Caparzo"),
 			(12, 10, "Kevin Wendell");
             
-	
+select * from tbl_filme_e_ator;
 UPDATE tbl_ator SET nome_ator='Elisabeth Olsen', dt_nascimento='1989-02-16'  WHERE id_ator = 18;
 UPDATE tbl_ator SET sexo='M' WHERE id_ator = 21 OR id_ator = 24;
-DELETE FROM tbl_ator WHERE id_ator = 26 OR id_ator = 27;
 
 select * from tbl_usuario;
 select * from tbl_ator;
-select * from tbl_genero;
 select * from tbl_diretor;
-
+select * from tbl_filme;
+select * from tbl_genero;

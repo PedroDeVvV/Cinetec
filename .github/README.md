@@ -10,5 +10,22 @@ Um projeto desenvolvido para aprimorar as habilidades em Node.js, React.js e MyS
 
 **Database:** MySQL
 
+## Telas da aplicação
+
+### Login
+![preview](./img/c1.png)
+
+### Cadastro
+![preview](./img/c2.png)
+
+### Cadastro de Atores
+![preview](./img/c3.png)
+
+### Cadastro de Diretores
+![preview](./img/c4.png)
+
+### Tela principal
+![preview](./img/c5.png)
+
 
 
