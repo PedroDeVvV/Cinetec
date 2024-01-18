@@ -4,9 +4,9 @@ Um projeto desenvolvido para aprimorar as habilidades em Node.js, React.js e MyS
 
 ## Stack utilizada
 
-**Front-end:** React, BootStrap
+**Front-end:** React, Bootstrap
 
-**Back-end:** Node, Express
+**Back-end:** Node.js, Express.js
 
 **Database:** MySQL
 
@@ -26,6 +26,3 @@ Um projeto desenvolvido para aprimorar as habilidades em Node.js, React.js e MyS
 
 ### Tela principal
 ![preview](./img/c5.png)
-
-
-
